@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block title %}Update Barang | Gudang Grosir App{% endblock %}
+
+{% block body %}
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <h4 style="text-align: center;">Update Barang</h4>
+        <form action="/update/{{barang[0][0]}}" method="POST">
+            <div class="form-group">
+                <input type="hidden" name="id" value="{{barang[0][0]}}" class="form-control" placeholder="ID">
+            </div>
+            <div class="form-group">
+                <input type="text" name="fnama" value="{{barang[0][1]}}" class="form-control" placeholder="Nama">
+            </div>
+            <div class="form-group">
+                <input type="integer" name="fkategori" value="{{barang[0][2]}}" class="form-control" placeholder="Kategori">
+            </div>
+            <div class="form-group">
+                <input type="text" name="fsatuan" value="{{barang[0][3]}}" class="form-control" placeholder="Satuan">
+            </div>
+            <div class="form-group">
+                <input type="integer" name="fjumlah" value="{{barang[0][4]}}" class="form-control" placeholder="Jumlah">
+            </div>
+            <div class="form-group">
+                <input type="date" name="tanggal" value="{{barang[0][5]}}" class="form-control" placeholder="Tanggal">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">
+                Update
+                </button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

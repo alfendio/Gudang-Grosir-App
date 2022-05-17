@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+  
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>    
+    </head>
+
+    <body>
+        <div class="sidebar">
+        <header style="font-family: 'Lucida Sans'; font-variant: small-caps; font-weight: 300;">Gudang Grosir App</header>
+        <ul>
+        <li><a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Dashboard</a></li>
+        <li><a href="{{ url_for('profil') }}"><i class="fas fa-user"></i>Profil Dev</a></li>
+        <li><a href="{{ url_for('read') }}"><i class="fas fa-qrcode"></i>Barang</a></li>
+        <li><a href="{{ url_for('tampilKategori') }}"><i class="fas fa-layer-group"></i>Kategori Barang</a></li>
+        <li><a href="{{ url_for('tampilAdmin') }}"><i class="fas fa-handshake"></i>Admin</a></li>
+        <li><a href="{{ url_for('logout') }}"><i class="fas fa-location-arrow"></i>Logout</a></li>
+        <i class="fa-solid fa-arrow-up-left-from-circle"></i>
+        </ul>
+        </div>
+        
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+        
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+        <div class="col-12">
+            {% block content %}{% endblock %}
+        </div>
+        </div>
+
+        <div class="container pt-4">
+            {% block body %}
+            {% endblock %}
+        </div>
+
+        
+
+
+    <script>
+    const btnDelete= document.querySelectorAll('.btn-delete');
+    if(btnDelete) {
+    const btnArray = Array.from(btnDelete);
+    btnArray.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+        if(!confirm('Are you sure you want to delete it?')){
+            e.preventDefault();
+        }
+        });
+    })
+    }
+  
+    $(document).ready(function() {
+        $('#example').DataTable({     
+        "aLengthMenu": [[3, 5, 10, 25, -1], [3, 5, 10, 25, "All"]],
+            "iDisplayLength": 10
+        } 
+        );
+    } );
+  
+    </script>
+
+  </body>
+</html>
+
+

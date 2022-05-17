@@ -1,0 +1,247 @@
+  body {
+    background-color: #435165;
+    margin: 0;
+  }
+   
+  .main{
+   margin-top:100px;
+  }
+   
+  h1.title { 
+  font-size: 50px;
+  font-family: 'Passion One', cursive; 
+  font-weight: 400; 
+  }
+   
+  hr{
+  width: 10%;
+  color: #fff;
+  }
+   
+  .form-group{
+  margin-bottom: 15px;
+  }
+   
+  label{
+  margin-bottom: 15px;
+  }
+   
+  input,
+  input::-webkit-input-placeholder {
+     font-size: 11px;
+     padding-top: 3px;
+  }
+   
+  .main-login{
+   background-color: #fff;
+     /* shadows and rounded borders */
+     -moz-border-radius: 2px;
+     -webkit-border-radius: 2px;
+     border-radius: 2px;
+     -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+     -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+   
+  }
+  .form-control {
+     height: auto!important;
+  padding: 8px 12px !important;
+  }
+  .input-group {
+     -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+     -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+  }
+  .main-center{
+   margin-top: 30px;
+   margin: 0 auto;
+   max-width: 400px;
+     padding: 40px 70px;
+  background:#063146;
+      color: #FFF;
+     text-shadow: none;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+   
+  }
+  span.input-group-addon i {
+     color: #fff;
+     font-size: 17px;padding:10px;
+  }
+   
+  .login-button{
+  margin-top: 5px;
+  }
+   
+  .login-register{
+  font-size: 11px;
+  text-align: center;
+  }
+   
+  .site-header {
+     background-color: rgba(0, 0, 0, 0.85);
+     -webkit-backdrop-filter: saturate(180%) blur(20px);
+     backdrop-filter: saturate(180%) blur(20px);
+  }
+  .site-header a { 
+  color:#fff;
+  }
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.sidebar {
+  position: fixed;
+  left: 0px;
+  width: 250px;
+  height: 100%;
+  background: #042331;
+  transition: all .5s ease;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #063146;
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  background: #042331;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn{
+  left: 250px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s;
+}
+label #cancel{
+  z-index: 1111;
+  left: 195px;
+  top: 17px;
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: -250px;
+}
+#check:checked ~ label #btn{
+  left: 40px;
+  opacity: 1;
+  pointer-events: auto;
+}
+#check:checked ~ label #cancel{
+  left: -195px;
+}
+#check:checked ~ section{
+  margin-left: 0px;
+}
+section{
+  background: url(bg.jpeg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: all .5s;
+  margin-left: -250px;
+}
+
+.footer-basic {
+    padding:25px ;
+    background-color:#042331;
+    color:#ffffff;
+  }
+  
+  .footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  
+  .footer-basic li {
+    padding:0 10px;
+  }
+  
+  .footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:8.8;
+  }
+  
+  .footer-basic ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ffffff;
+    margin:0 8px;
+    color:inherit;
+    opacity:8.75;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:7.9;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#ffffff;
+    margin-bottom:0;
+  }
